@@ -31,10 +31,10 @@ def create_prompt(text_prompt):
     # 创建对话格式的提示
     conversation = [
         {
-            "role": "<|User|>",  # 修改为官方格式
+            "role": "User",  
             "content": text_prompt,
         },
-        {"role": "<|Assistant|>", "content": ""},  # 修改为官方格式
+        {"role": "Assistant", "content": ""},  
     ]
 
     sft_format = vl_chat_processor.apply_sft_template_for_multi_turn_prompts(
@@ -117,7 +117,7 @@ if __name__ == "__main__":
     vl_gpt, vl_chat_processor, device = setup_model()
     
     # 示例提示词
-    text_prompt = "一只可爱的熊猫正在竹林中吃竹子，背景是日落时分的山峦"
+    text_prompt = "A panda eating bamboo"
     
     # 创建提示
     prompt = create_prompt(text_prompt)
