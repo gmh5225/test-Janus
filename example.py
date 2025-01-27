@@ -7,7 +7,7 @@ import numpy as np
 
 def setup_model():
     # 加载模型和处理器
-    model_path = "deepseek-ai/Janus-Pro-1B"
+    model_path = "deepseek-ai/Janus-Pro-7B"
     vl_chat_processor = VLChatProcessor.from_pretrained(model_path)
     tokenizer = vl_chat_processor.tokenizer
 
